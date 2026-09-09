@@ -34,7 +34,7 @@ flowchart TD
 - `project_deploy/Disease_ICD/icd/disease/memory.py`：长期记忆 SQLite 仓库与隐私校验。
 - `project_deploy/Disease_ICD/icd/disease/GetICD.py`：保留原前端逐行 JSON 协议的兼容入口。
 
-## 2. LangChain 和 LangGraph 如何使用
+## 2. LangChain 和 LangGraph 
 
 每个专业 Agent 都通过 LangChain LCEL 组成：
 
@@ -212,17 +212,5 @@ Content-Type: application/json
 响应继续采用原前端兼容的逐行 JSON，包括 `status`、`agent_response` 和
 `final_result`。每条响应同时返回 `thread_id`，方便排查和恢复状态。
 
-## 7. 数据与安全建议
 
-- 不要把患者姓名、身份证、手机号等信息写入长期记忆。
-- `thread_id` 建议使用会话 UUID，不直接使用病案号。
-- SQLite 适用于开发和单机部署；多实例生产环境建议将 LangGraph checkpointer
-  与长期 store 迁移到 PostgreSQL，并启用静态加密、访问控制和数据保留策略。
-- Elasticsearch、模型服务和记忆管理接口应部署在内网，并配置认证。
-- `data/memory/*.sqlite3*` 和推理结果文件不应提交到 Git。
 
-## 8. 项目边界
-
-本次 LangGraph 改造覆盖用户指定的**疾病 ICD 主流程**。手术 ICD 仍保留原有
-独立流程，其潜在手术挖掘不属于潜在疾病挖掘；后续可按同样方式封装为手术子图，
-再由顶层路由图并行或按病历类型调度。
