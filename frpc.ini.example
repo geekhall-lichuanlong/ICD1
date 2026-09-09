@@ -1,0 +1,10 @@
+[common]
+server_addr = example.com
+server_port = 7000
+token = change_me
+
+[web_service]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 9028
+remote_port = 9028

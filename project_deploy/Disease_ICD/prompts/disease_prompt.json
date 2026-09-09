@@ -1,0 +1,8 @@
+{
+  "disease_standardized": "{content}",
+  "disease_potential_extract": "{content}",
+  "disease_potential_standardized": "{content}",
+  "disease_main_diagnosis": "{content}",
+  "disease_potential_verify": "{content}",
+  "disease_screening": "{content}"
+}

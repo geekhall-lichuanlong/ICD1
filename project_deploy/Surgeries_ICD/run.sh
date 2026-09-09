@@ -1,0 +1,11 @@
+python3 run.py \
+    --surgery_standardized_url "http://localhost:8000/v1/chat/completions" \
+    --surgery_standardized_model checkpoint-450-best \
+    --surgery_additional_url "http://localhost:8001/v1/chat/completions" \
+    --surgery_additional_model checkpoint-250-best \
+    --surgery_sorting_url "http://localhost:8003/v1/chat/completions" \
+    --surgery_sorting_model checkpoint-600-best \
+    --surgery_screening_url "http://localhost:8009/v1/chat/completions" \
+    --surgery_screening_model checkpoint-650-best \
+    --flask_url "http://localhost:6000/" \
+    --output_dir "output"

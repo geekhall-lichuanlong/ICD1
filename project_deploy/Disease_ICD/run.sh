@@ -1,0 +1,13 @@
+python3 run.py \
+    --disease_standardized_url "http://localhost:8004/v1/chat/completions" \
+    --disease_standardized_model checkpoint-1719-best \
+    --disease_potential_verify_url "${DISEASE_POTENTIAL_VERIFY_URL:-none}" \
+    --disease_potential_verify_model "${DISEASE_POTENTIAL_VERIFY_MODEL:-none}" \
+    --disease_potential_url "${DISEASE_POTENTIAL_EXTRACT_URL:-none}" \
+    --disease_potential_model "${DISEASE_POTENTIAL_EXTRACT_MODEL:-none}" \
+    --disease_main_diagnosis_url "http://localhost:8008/v1/chat/completions" \
+    --disease_main_diagnosis_model checkpoint-1550-best \
+    --disease_screening_url "http://localhost:8007/v1/chat/completions" \
+    --disease_screening_model checkpoint-2775-best \
+    --flask_url "http://localhost:5511/" \
+    --output_dir "output"

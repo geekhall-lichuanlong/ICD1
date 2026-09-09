@@ -9,3 +9,31 @@ project_deploy/Disease_ICD/data/memory/*.sqlite3-*
 
 # Runtime outputs
 project_deploy/Disease_ICD/output/*.jsonl
+
+# Local credentials and machine-specific configuration
+frpc.ini
+.env
+.env.*
+!.env.example
+
+# Runtime, uploaded, and patient-derived data
+project_deploy/Disease_ICD/output/
+project_deploy/Disease_ICD/tmp/
+project_deploy/PaddleOCR-main/Uploads/
+project_deploy/PaddleOCR-main/output/
+project_deploy/PaddleOCR-main/ppstructure/Uploads/
+project_deploy/PaddleOCR-main/ppstructure/output/
+project_deploy/qy_icd/qy_backend/media/uploads/
+project_deploy/qy_icd/qy_backend/*.sqlite3
+
+# Logs and local caches
+*.log
+.cache/
+
+# Local fixtures containing record-like test data
+project_deploy/Disease_ICD/test.sh
+project_deploy/Surgeries_ICD/test.sh
+project_deploy/PaddleOCR-main/ppstructure/6186.json
+project_deploy/qy_icd/qianyi-web/src/utils/mock_ocr.js
+project_deploy/Disease_ICD/tools/data.xlsx
+project_deploy/PaddleOCR-main/ppstructure/6186.xlsx
