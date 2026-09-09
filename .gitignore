@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+
+# LangGraph short-term checkpoints and reviewed long-term memory
+project_deploy/Disease_ICD/data/memory/*.sqlite3
+project_deploy/Disease_ICD/data/memory/*.sqlite3-*
+
+# Runtime outputs
+project_deploy/Disease_ICD/output/*.jsonl
